@@ -1,11 +1,13 @@
 FROM python:3.5
 ENV PYTHONUNBUFFERED 1
 
+# Get latest Node source
+RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
+
 RUN \
  apt-get -y update && \
- apt-get install -y npm && \
- apt-get clean && \
- ln -s /usr/bin/nodejs /usr/bin/node
+ apt-get install -y nodejs && \
+ apt-get clean 
 
 ADD requirements.txt /app/requirements.txt
 RUN cd /app && pip install -r requirements.txt
