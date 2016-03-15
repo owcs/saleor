@@ -6,6 +6,7 @@
 #
 Babel==2.2.0              # via babeldjango, django-prices
 BabelDjango==0.2.2        # via django-prices
+bcrypt==2.0.0
 boto==2.39.0              # via django-offsite-storage
 braintree==3.25.0         # via django-payments
 cffi==1.5.2               # via cryptography
